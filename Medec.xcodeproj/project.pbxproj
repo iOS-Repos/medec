@@ -35,6 +35,9 @@
 		93F882382368E13900E042E9 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93F882262368E13900E042E9 /* Poppins-ExtraLight.ttf */; };
 		93F8823A2368E3DD00E042E9 /* DesignableUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F882392368E3DD00E042E9 /* DesignableUIButton.swift */; };
 		93F8823C2368E6E300E042E9 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8823B2368E6E300E042E9 /* UIViewController.swift */; };
+		93F8823E2368ED7200E042E9 /* DesignableUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8823D2368ED7200E042E9 /* DesignableUIImage.swift */; };
+		93F882402368F7D300E042E9 /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8823F2368F7D300E042E9 /* DesignableUIView.swift */; };
+		93F882422368FD1300E042E9 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F882412368FD1300E042E9 /* DesignableUITextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		93F882262368E13900E042E9 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		93F882392368E3DD00E042E9 /* DesignableUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIButton.swift; sourceTree = "<group>"; };
 		93F8823B2368E6E300E042E9 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		93F8823D2368ED7200E042E9 /* DesignableUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIImage.swift; sourceTree = "<group>"; };
+		93F8823F2368F7D300E042E9 /* DesignableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
+		93F882412368FD1300E042E9 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +186,9 @@
 			isa = PBXGroup;
 			children = (
 				93F882392368E3DD00E042E9 /* DesignableUIButton.swift */,
+				93F8823D2368ED7200E042E9 /* DesignableUIImage.swift */,
+				93F8823F2368F7D300E042E9 /* DesignableUIView.swift */,
+				93F882412368FD1300E042E9 /* DesignableUITextField.swift */,
 			);
 			path = IBDesignables;
 			sourceTree = "<group>";
@@ -319,8 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				93F8823C2368E6E300E042E9 /* UIViewController.swift in Sources */,
+				93F8823E2368ED7200E042E9 /* DesignableUIImage.swift in Sources */,
 				93F881F62368DC6B00E042E9 /* ViewController.swift in Sources */,
+				93F882402368F7D300E042E9 /* DesignableUIView.swift in Sources */,
 				93F8823A2368E3DD00E042E9 /* DesignableUIButton.swift in Sources */,
+				93F882422368FD1300E042E9 /* DesignableUITextField.swift in Sources */,
 				93F882082368DD1600E042E9 /* Storyboard.swift in Sources */,
 				93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */,
 				93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */,
