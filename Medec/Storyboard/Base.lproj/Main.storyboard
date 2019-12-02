@@ -284,7 +284,7 @@ test  </string>
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="409"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-options-background" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-ew-PCd" customClass="DesignableUIImage" customModule="Medec" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="-40" width="414" height="449.00000000000011"/>
+                                                <rect key="frame" x="0.0" y="-100" width="414" height="509"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="40"/>
@@ -294,7 +294,7 @@ test  </string>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
-                                            <constraint firstItem="Y7H-ew-PCd" firstAttribute="top" secondItem="xcV-h8-guz" secondAttribute="top" constant="-40" id="7mB-wF-LPE"/>
+                                            <constraint firstItem="Y7H-ew-PCd" firstAttribute="top" secondItem="xcV-h8-guz" secondAttribute="top" constant="-100" id="7mB-wF-LPE"/>
                                             <constraint firstItem="Y7H-ew-PCd" firstAttribute="leading" secondItem="xcV-h8-guz" secondAttribute="leading" id="OfT-06-WTh"/>
                                             <constraint firstAttribute="trailing" secondItem="Y7H-ew-PCd" secondAttribute="trailing" id="X8u-xi-rON"/>
                                             <constraint firstAttribute="bottom" secondItem="Y7H-ew-PCd" secondAttribute="bottom" id="fJE-O3-gqJ"/>
@@ -423,7 +423,7 @@ test  </string>
         <!--View Controller-->
         <scene sceneID="qVH-Or-7a5">
             <objects>
-                <viewController id="g4f-2H-T7g" sceneMemberID="viewController">
+                <viewController id="g4f-2H-T7g" customClass="OTPViewController" customModule="Medec" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A3d-7X-RwC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -477,7 +477,7 @@ test  </string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+92" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7L-9f-eEV" customClass="DesignableUITextField" customModule="Medec" customModuleProvider="target">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+92" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z7L-9f-eEV" customClass="FPNTextField" customModule="FlagPhoneNumber">
                                         <rect key="frame" x="30" y="30" width="50" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="50" id="Thg-ig-cri"/>
@@ -509,7 +509,7 @@ test  </string>
                                             <constraint firstAttribute="height" constant="50" id="O3Y-Wp-fkn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="continue"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="15"/>
@@ -583,6 +583,9 @@ test  </string>
                         <viewLayoutGuide key="safeArea" id="Iu2-yr-nDH"/>
                     </view>
                     <navigationItem key="navigationItem" id="j7W-0t-Jcb"/>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="Z7L-9f-eEV" id="rGk-NP-bS2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w8P-ig-ze7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

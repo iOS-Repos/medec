@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268BAD4BC513443D9A4EB1D6 /* Pods_Medec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4381A7392796B6E000491D83 /* Pods_Medec.framework */; };
 		93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F881F12368DC6B00E042E9 /* AppDelegate.swift */; };
 		93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F881F32368DC6B00E042E9 /* SceneDelegate.swift */; };
 		93F881F62368DC6B00E042E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F881F52368DC6B00E042E9 /* ViewController.swift */; };
@@ -38,9 +39,12 @@
 		93F8823E2368ED7200E042E9 /* DesignableUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8823D2368ED7200E042E9 /* DesignableUIImage.swift */; };
 		93F882402368F7D300E042E9 /* DesignableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F8823F2368F7D300E042E9 /* DesignableUIView.swift */; };
 		93F882422368FD1300E042E9 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F882412368FD1300E042E9 /* DesignableUITextField.swift */; };
+		93F88245236901BD00E042E9 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F88244236901BD00E042E9 /* OTPViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medec.debug.xcconfig"; path = "Target Support Files/Pods-Medec/Pods-Medec.debug.xcconfig"; sourceTree = "<group>"; };
+		4381A7392796B6E000491D83 /* Pods_Medec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F881EE2368DC6A00E042E9 /* Medec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F881F12368DC6B00E042E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F881F32368DC6B00E042E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		93F8823D2368ED7200E042E9 /* DesignableUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIImage.swift; sourceTree = "<group>"; };
 		93F8823F2368F7D300E042E9 /* DesignableUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUIView.swift; sourceTree = "<group>"; };
 		93F882412368FD1300E042E9 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		93F88244236901BD00E042E9 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
+		D54D21DC27F313C71C019385 /* Pods-Medec.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medec.release.xcconfig"; path = "Target Support Files/Pods-Medec/Pods-Medec.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,17 +87,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268BAD4BC513443D9A4EB1D6 /* Pods_Medec.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		605562DA05099B88A8820610 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */,
+				D54D21DC27F313C71C019385 /* Pods-Medec.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		93F881E52368DC6A00E042E9 = {
 			isa = PBXGroup;
 			children = (
 				93F881F02368DC6A00E042E9 /* Medec */,
 				93F881EF2368DC6A00E042E9 /* Products */,
+				605562DA05099B88A8820610 /* Pods */,
+				CA4C5C21BD6362A7DB40C2E2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -218,6 +236,7 @@
 		93F882122368DD9500E042E9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				93F88243236901AA00E042E9 /* OTP */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -238,6 +257,22 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		93F88243236901AA00E042E9 /* OTP */ = {
+			isa = PBXGroup;
+			children = (
+				93F88244236901BD00E042E9 /* OTPViewController.swift */,
+			);
+			path = OTP;
+			sourceTree = "<group>";
+		};
+		CA4C5C21BD6362A7DB40C2E2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4381A7392796B6E000491D83 /* Pods_Medec.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,9 +280,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93F882022368DC6C00E042E9 /* Build configuration list for PBXNativeTarget "Medec" */;
 			buildPhases = (
+				A18449554A64099FD51D4CEB /* [CP] Check Pods Manifest.lock */,
 				93F881EA2368DC6A00E042E9 /* Sources */,
 				93F881EB2368DC6A00E042E9 /* Frameworks */,
 				93F881EC2368DC6A00E042E9 /* Resources */,
+				912CC36909E3EA9559459C0C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -322,6 +359,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		912CC36909E3EA9559459C0C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Medec/Pods-Medec-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Medec/Pods-Medec-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Medec/Pods-Medec-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A18449554A64099FD51D4CEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Medec-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		93F881EA2368DC6A00E042E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -333,6 +412,7 @@
 				93F882402368F7D300E042E9 /* DesignableUIView.swift in Sources */,
 				93F8823A2368E3DD00E042E9 /* DesignableUIButton.swift in Sources */,
 				93F882422368FD1300E042E9 /* DesignableUITextField.swift in Sources */,
+				93F88245236901BD00E042E9 /* OTPViewController.swift in Sources */,
 				93F882082368DD1600E042E9 /* Storyboard.swift in Sources */,
 				93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */,
 				93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */,
@@ -478,6 +558,7 @@
 		};
 		93F882032368DC6C00E042E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -496,6 +577,7 @@
 		};
 		93F882042368DC6C00E042E9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D54D21DC27F313C71C019385 /* Pods-Medec.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
