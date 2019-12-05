@@ -9,48 +9,28 @@
 import UIKit
 import FlagPhoneNumber
 
-class OTPViewController : UIViewController {
+protocol OTPViewControllerInterface
+{
+    
+    //    func displayFetchedUser(viewModel: Login.FetchUser.ViewModel) // Passes the model to which the response should be casted to / modeled
+    
+    func setupUI() // Sets Animation , Border ... all UI related things
+    func doLocalization()
+}
+
+class OTPViewController : UIViewController , OTPViewControllerInterface {
     
     
     @IBOutlet weak var phoneNumberTextField: FPNTextField!
+    @IBOutlet weak var countryPickerContainerView: UIView!
+    
+    var output: OTPInteractorInterface!
+    var router: OTPRouter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        phoneNumberTextField.borderStyle = .roundedRect
-
-        // Comment this line to not have access to the country list
-        phoneNumberTextField.parentViewController = self
-        phoneNumberTextField.delegate = self
-
-//        phoneNumberTextField.font = UIFont.systemFont(ofSize: 14)
-
-        // Custom the size/edgeInsets of the flag button
-//        phoneNumberTextField.flagButtonSize = CGSize(width: 35, height: 35)
-        phoneNumberTextField.flagButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2)
-
-        // Example of customizing the textField input accessory view
-        //        let items = [
-        //            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: nil),
-        //            UIBarButtonItem(title: "Item 1", style: .plain, target: self, action: nil),
-        //            UIBarButtonItem(title: "Item 2", style: .plain, target: self, action: nil)
-        //        ]
-        //        phoneNumberTextField.textFieldInputAccessoryView = getCustomTextFieldInputAccessoryView(with: items)
-        // The placeholder is an example phone number of the selected country by default. You can add your own placeholder :
-        phoneNumberTextField.hasPhoneNumberExample = true
-        //        phoneNumberTextField.placeholder = "Phone Number"
-        // Set the country list
-        //        phoneNumberTextField.setCountries(including: [.FR, .ES, .IT, .BE, .LU, .DE])
-        // Exclude countries from the list
-        //        phoneNumberTextField.setCountries(excluding: [.AM, .BW, .BA])
-        // Set the flag image with a region code
-        //        phoneNumberTextField.setFlag(for: "FR")
-        // Set the phone number directly
-        phoneNumberTextField.set(phoneNumber: "+33612345678")
-
-        view.addSubview(phoneNumberTextField)
-
-        phoneNumberTextField.center = view.center
+        setupUI()
     }
     
     private func getCustomTextFieldInputAccessoryView(with items: [UIBarButtonItem]) -> UIToolbar {
@@ -61,6 +41,24 @@ class OTPViewController : UIViewController {
         toolbar.sizeToFit()
 
         return toolbar
+    }
+    
+    public func setupUI(){
+        
+        phoneNumberTextField.borderStyle = .roundedRect
+        phoneNumberTextField.parentViewController = self
+        phoneNumberTextField.delegate = self
+        phoneNumberTextField.flagButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 2, bottom: 0, right: 2)
+        phoneNumberTextField.hasPhoneNumberExample = true
+        phoneNumberTextField.set(phoneNumber: "+33612345678")
+        countryPickerContainerView.addSubview(phoneNumberTextField)
+        phoneNumberTextField.center = view.center
+        
+        hideKeyboardWhenTappedAround()
+    }
+    
+    public func doLocalization() {
+        
     }
 }
 

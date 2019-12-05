@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		268BAD4BC513443D9A4EB1D6 /* Pods_Medec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4381A7392796B6E000491D83 /* Pods_Medec.framework */; };
+		937ABA562399663B00B6809A /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA512399663900B6809A /* Gilroy-Regular.ttf */; };
+		937ABA572399663B00B6809A /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA522399663900B6809A /* Gilroy-Light.ttf */; };
+		937ABA582399663B00B6809A /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA532399663A00B6809A /* Gilroy-Medium.ttf */; };
+		937ABA592399663B00B6809A /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA542399663A00B6809A /* Gilroy-Bold.ttf */; };
+		937ABA5A2399663B00B6809A /* Gilroy-Heavy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA552399663B00B6809A /* Gilroy-Heavy.ttf */; };
+		937ABA5C2399865600B6809A /* OTPConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937ABA5B2399865600B6809A /* OTPConfigurator.swift */; };
+		937ABA5E2399873300B6809A /* OTPInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937ABA5D2399873300B6809A /* OTPInteractor.swift */; };
+		937ABA602399878000B6809A /* OTPRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937ABA5F2399878000B6809A /* OTPRouter.swift */; };
+		937ABA62239987E100B6809A /* OTPPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937ABA61239987E100B6809A /* OTPPresenter.swift */; };
 		93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F881F12368DC6B00E042E9 /* AppDelegate.swift */; };
 		93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F881F32368DC6B00E042E9 /* SceneDelegate.swift */; };
 		93F881F62368DC6B00E042E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F881F52368DC6B00E042E9 /* ViewController.swift */; };
@@ -45,6 +54,15 @@
 /* Begin PBXFileReference section */
 		40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medec.debug.xcconfig"; path = "Target Support Files/Pods-Medec/Pods-Medec.debug.xcconfig"; sourceTree = "<group>"; };
 		4381A7392796B6E000491D83 /* Pods_Medec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		937ABA512399663900B6809A /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
+		937ABA522399663900B6809A /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
+		937ABA532399663A00B6809A /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
+		937ABA542399663A00B6809A /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.ttf"; sourceTree = "<group>"; };
+		937ABA552399663B00B6809A /* Gilroy-Heavy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.ttf"; sourceTree = "<group>"; };
+		937ABA5B2399865600B6809A /* OTPConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPConfigurator.swift; sourceTree = "<group>"; };
+		937ABA5D2399873300B6809A /* OTPInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPInteractor.swift; sourceTree = "<group>"; };
+		937ABA5F2399878000B6809A /* OTPRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRouter.swift; sourceTree = "<group>"; };
+		937ABA61239987E100B6809A /* OTPPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPPresenter.swift; sourceTree = "<group>"; };
 		93F881EE2368DC6A00E042E9 /* Medec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medec.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93F881F12368DC6B00E042E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93F881F32368DC6B00E042E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +119,43 @@
 				D54D21DC27F313C71C019385 /* Pods-Medec.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		937ABA4F2399660100B6809A /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				93F882162368E13800E042E9 /* Poppins-Black.ttf */,
+				93F882242368E13900E042E9 /* Poppins-BlackItalic.ttf */,
+				93F882182368E13800E042E9 /* Poppins-Bold.ttf */,
+				93F882252368E13900E042E9 /* Poppins-BoldItalic.ttf */,
+				93F882232368E13900E042E9 /* Poppins-ExtraBold.ttf */,
+				93F882172368E13800E042E9 /* Poppins-ExtraBoldItalic.ttf */,
+				93F882262368E13900E042E9 /* Poppins-ExtraLight.ttf */,
+				93F882212368E13900E042E9 /* Poppins-ExtraLightItalic.ttf */,
+				93F8821F2368E13800E042E9 /* Poppins-Italic.ttf */,
+				93F8821D2368E13800E042E9 /* Poppins-Light.ttf */,
+				93F882222368E13900E042E9 /* Poppins-LightItalic.ttf */,
+				93F8821E2368E13800E042E9 /* Poppins-Medium.ttf */,
+				93F882202368E13900E042E9 /* Poppins-MediumItalic.ttf */,
+				93F882192368E13800E042E9 /* Poppins-Regular.ttf */,
+				93F882152368E13800E042E9 /* Poppins-SemiBold.ttf */,
+				93F8821B2368E13800E042E9 /* Poppins-SemiBoldItalic.ttf */,
+				93F8821C2368E13800E042E9 /* Poppins-Thin.ttf */,
+				93F8821A2368E13800E042E9 /* Poppins-ThinItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
+		937ABA502399661B00B6809A /* Glroy */ = {
+			isa = PBXGroup;
+			children = (
+				937ABA542399663A00B6809A /* Gilroy-Bold.ttf */,
+				937ABA552399663B00B6809A /* Gilroy-Heavy.ttf */,
+				937ABA522399663900B6809A /* Gilroy-Light.ttf */,
+				937ABA532399663A00B6809A /* Gilroy-Medium.ttf */,
+				937ABA512399663900B6809A /* Gilroy-Regular.ttf */,
+			);
+			path = Glroy;
 			sourceTree = "<group>";
 		};
 		93F881E52368DC6A00E042E9 = {
@@ -178,24 +233,8 @@
 		93F8820D2368DD5600E042E9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				93F882162368E13800E042E9 /* Poppins-Black.ttf */,
-				93F882242368E13900E042E9 /* Poppins-BlackItalic.ttf */,
-				93F882182368E13800E042E9 /* Poppins-Bold.ttf */,
-				93F882252368E13900E042E9 /* Poppins-BoldItalic.ttf */,
-				93F882232368E13900E042E9 /* Poppins-ExtraBold.ttf */,
-				93F882172368E13800E042E9 /* Poppins-ExtraBoldItalic.ttf */,
-				93F882262368E13900E042E9 /* Poppins-ExtraLight.ttf */,
-				93F882212368E13900E042E9 /* Poppins-ExtraLightItalic.ttf */,
-				93F8821F2368E13800E042E9 /* Poppins-Italic.ttf */,
-				93F8821D2368E13800E042E9 /* Poppins-Light.ttf */,
-				93F882222368E13900E042E9 /* Poppins-LightItalic.ttf */,
-				93F8821E2368E13800E042E9 /* Poppins-Medium.ttf */,
-				93F882202368E13900E042E9 /* Poppins-MediumItalic.ttf */,
-				93F882192368E13800E042E9 /* Poppins-Regular.ttf */,
-				93F882152368E13800E042E9 /* Poppins-SemiBold.ttf */,
-				93F8821B2368E13800E042E9 /* Poppins-SemiBoldItalic.ttf */,
-				93F8821C2368E13800E042E9 /* Poppins-Thin.ttf */,
-				93F8821A2368E13800E042E9 /* Poppins-ThinItalic.ttf */,
+				937ABA4F2399660100B6809A /* Poppins */,
+				937ABA502399661B00B6809A /* Glroy */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -260,6 +299,10 @@
 		93F88243236901AA00E042E9 /* OTP */ = {
 			isa = PBXGroup;
 			children = (
+				937ABA5B2399865600B6809A /* OTPConfigurator.swift */,
+				937ABA5D2399873300B6809A /* OTPInteractor.swift */,
+				937ABA61239987E100B6809A /* OTPPresenter.swift */,
+				937ABA5F2399878000B6809A /* OTPRouter.swift */,
 				93F88244236901BD00E042E9 /* OTPViewController.swift */,
 			);
 			path = OTP;
@@ -334,16 +377,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				93F882342368E13900E042E9 /* Poppins-LightItalic.ttf in Resources */,
+				937ABA582399663B00B6809A /* Gilroy-Medium.ttf in Resources */,
 				93F882332368E13900E042E9 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				93F882292368E13900E042E9 /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				93F881FE2368DC6C00E042E9 /* LaunchScreen.storyboard in Resources */,
 				93F882312368E13900E042E9 /* Poppins-Italic.ttf in Resources */,
 				93F8822A2368E13900E042E9 /* Poppins-Bold.ttf in Resources */,
+				937ABA572399663B00B6809A /* Gilroy-Light.ttf in Resources */,
+				937ABA5A2399663B00B6809A /* Gilroy-Heavy.ttf in Resources */,
 				93F882382368E13900E042E9 /* Poppins-ExtraLight.ttf in Resources */,
 				93F882322368E13900E042E9 /* Poppins-MediumItalic.ttf in Resources */,
 				93F882302368E13900E042E9 /* Poppins-Medium.ttf in Resources */,
 				93F882272368E13900E042E9 /* Poppins-SemiBold.ttf in Resources */,
 				93F881FB2368DC6C00E042E9 /* Assets.xcassets in Resources */,
+				937ABA562399663B00B6809A /* Gilroy-Regular.ttf in Resources */,
 				93F882352368E13900E042E9 /* Poppins-ExtraBold.ttf in Resources */,
 				93F8822D2368E13900E042E9 /* Poppins-SemiBoldItalic.ttf in Resources */,
 				93F881F92368DC6B00E042E9 /* Main.storyboard in Resources */,
@@ -352,6 +399,7 @@
 				93F882282368E13900E042E9 /* Poppins-Black.ttf in Resources */,
 				93F882362368E13900E042E9 /* Poppins-BlackItalic.ttf in Resources */,
 				93F8822E2368E13900E042E9 /* Poppins-Thin.ttf in Resources */,
+				937ABA592399663B00B6809A /* Gilroy-Bold.ttf in Resources */,
 				93F8822B2368E13900E042E9 /* Poppins-Regular.ttf in Resources */,
 				93F882372368E13900E042E9 /* Poppins-BoldItalic.ttf in Resources */,
 			);
@@ -406,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				937ABA5E2399873300B6809A /* OTPInteractor.swift in Sources */,
 				93F8823C2368E6E300E042E9 /* UIViewController.swift in Sources */,
 				93F8823E2368ED7200E042E9 /* DesignableUIImage.swift in Sources */,
 				93F881F62368DC6B00E042E9 /* ViewController.swift in Sources */,
@@ -416,6 +465,9 @@
 				93F882082368DD1600E042E9 /* Storyboard.swift in Sources */,
 				93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */,
 				93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */,
+				937ABA62239987E100B6809A /* OTPPresenter.swift in Sources */,
+				937ABA5C2399865600B6809A /* OTPConfigurator.swift in Sources */,
+				937ABA602399878000B6809A /* OTPRouter.swift in Sources */,
 				93F882062368DCE500E042E9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
