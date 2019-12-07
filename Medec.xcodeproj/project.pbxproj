@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		268BAD4BC513443D9A4EB1D6 /* Pods_Medec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4381A7392796B6E000491D83 /* Pods_Medec.framework */; };
+		9359C15B239BCFAC00974DA8 /* OTPEntryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */; };
+		9359C15D239BD89600974DA8 /* OTPEntryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15C239BD89600974DA8 /* OTPEntryRouter.swift */; };
+		9359C15F239BD8D300974DA8 /* OTPEntryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15E239BD8D300974DA8 /* OTPEntryPresenter.swift */; };
+		9359C161239BD90F00974DA8 /* OTPEntryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C160239BD90F00974DA8 /* OTPEntryInteractor.swift */; };
+		9359C164239BDDD600974DA8 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C163239BDDD600974DA8 /* WalkThroughViewController.swift */; };
+		93711DC7239990500078263D /* OTPEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93711DC6239990500078263D /* OTPEntryViewController.swift */; };
 		937ABA562399663B00B6809A /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA512399663900B6809A /* Gilroy-Regular.ttf */; };
 		937ABA572399663B00B6809A /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA522399663900B6809A /* Gilroy-Light.ttf */; };
 		937ABA582399663B00B6809A /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA532399663A00B6809A /* Gilroy-Medium.ttf */; };
@@ -54,6 +60,12 @@
 /* Begin PBXFileReference section */
 		40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medec.debug.xcconfig"; path = "Target Support Files/Pods-Medec/Pods-Medec.debug.xcconfig"; sourceTree = "<group>"; };
 		4381A7392796B6E000491D83 /* Pods_Medec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryConfigurator.swift; sourceTree = "<group>"; };
+		9359C15C239BD89600974DA8 /* OTPEntryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryRouter.swift; sourceTree = "<group>"; };
+		9359C15E239BD8D300974DA8 /* OTPEntryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryPresenter.swift; sourceTree = "<group>"; };
+		9359C160239BD90F00974DA8 /* OTPEntryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryInteractor.swift; sourceTree = "<group>"; };
+		9359C163239BDDD600974DA8 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
+		93711DC6239990500078263D /* OTPEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryViewController.swift; sourceTree = "<group>"; };
 		937ABA512399663900B6809A /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		937ABA522399663900B6809A /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		937ABA532399663A00B6809A /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
@@ -121,6 +133,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9359C162239BDDBF00974DA8 /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				9359C163239BDDD600974DA8 /* WalkThroughViewController.swift */,
+			);
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
 		937ABA4F2399660100B6809A /* Poppins */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +176,18 @@
 				937ABA512399663900B6809A /* Gilroy-Regular.ttf */,
 			);
 			path = Glroy;
+			sourceTree = "<group>";
+		};
+		937ABA6323998BD500B6809A /* OTPEntry */ = {
+			isa = PBXGroup;
+			children = (
+				9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */,
+				9359C160239BD90F00974DA8 /* OTPEntryInteractor.swift */,
+				9359C15E239BD8D300974DA8 /* OTPEntryPresenter.swift */,
+				9359C15C239BD89600974DA8 /* OTPEntryRouter.swift */,
+				93711DC6239990500078263D /* OTPEntryViewController.swift */,
+			);
+			path = OTPEntry;
 			sourceTree = "<group>";
 		};
 		93F881E52368DC6A00E042E9 = {
@@ -275,6 +307,8 @@
 		93F882122368DD9500E042E9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				9359C162239BDDBF00974DA8 /* WalkThrough */,
+				937ABA6323998BD500B6809A /* OTPEntry */,
 				93F88243236901AA00E042E9 /* OTP */,
 			);
 			path = Scene;
@@ -456,18 +490,24 @@
 			files = (
 				937ABA5E2399873300B6809A /* OTPInteractor.swift in Sources */,
 				93F8823C2368E6E300E042E9 /* UIViewController.swift in Sources */,
+				9359C15D239BD89600974DA8 /* OTPEntryRouter.swift in Sources */,
 				93F8823E2368ED7200E042E9 /* DesignableUIImage.swift in Sources */,
 				93F881F62368DC6B00E042E9 /* ViewController.swift in Sources */,
 				93F882402368F7D300E042E9 /* DesignableUIView.swift in Sources */,
 				93F8823A2368E3DD00E042E9 /* DesignableUIButton.swift in Sources */,
 				93F882422368FD1300E042E9 /* DesignableUITextField.swift in Sources */,
+				9359C161239BD90F00974DA8 /* OTPEntryInteractor.swift in Sources */,
+				9359C15F239BD8D300974DA8 /* OTPEntryPresenter.swift in Sources */,
 				93F88245236901BD00E042E9 /* OTPViewController.swift in Sources */,
 				93F882082368DD1600E042E9 /* Storyboard.swift in Sources */,
+				9359C164239BDDD600974DA8 /* WalkThroughViewController.swift in Sources */,
 				93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */,
 				93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */,
+				93711DC7239990500078263D /* OTPEntryViewController.swift in Sources */,
 				937ABA62239987E100B6809A /* OTPPresenter.swift in Sources */,
 				937ABA5C2399865600B6809A /* OTPConfigurator.swift in Sources */,
 				937ABA602399878000B6809A /* OTPRouter.swift in Sources */,
+				9359C15B239BCFAC00974DA8 /* OTPEntryConfigurator.swift in Sources */,
 				93F882062368DCE500E042E9 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,7 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4N2273XH5K;
+				DEVELOPMENT_TEAM = W82U8U2488;
 				INFOPLIST_FILE = Medec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -633,7 +673,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4N2273XH5K;
+				DEVELOPMENT_TEAM = W82U8U2488;
 				INFOPLIST_FILE = Medec/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

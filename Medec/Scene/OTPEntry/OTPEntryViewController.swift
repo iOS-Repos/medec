@@ -1,5 +1,5 @@
 //
-//  OTPViewController.swift
+//  OTPEntryViewController.swift
 //  Medec
 //
 //  Created by Yeabsira Gashaw on 10/30/19.
@@ -9,7 +9,7 @@
 import UIKit
 import FlagPhoneNumber
 
-protocol OTPViewControllerInterface
+protocol OTPEntryViewControllerInterface
 {
     
     //    func displayFetchedUser(viewModel: Login.FetchUser.ViewModel) // Passes the model to which the response should be casted to / modeled
@@ -18,21 +18,19 @@ protocol OTPViewControllerInterface
     func doLocalization()
 }
 
-class OTPViewController : UIViewController , OTPViewControllerInterface {
+class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterface {
     
-    
-    @IBOutlet weak var phoneNumberTextField: FPNTextField!
     @IBOutlet weak var countryPickerContainerView: UIView!
     @IBOutlet weak var phoneNumberMainTextField: DesignableUITextField!
     
-    var output: OTPInteractorInterface!
-    var router: OTPRouter!
+    var output: OTPEntryInteractorInterface!
+    var router: OTPEntryRouter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Binds Router + Interactor + Presenter - Maybe Worker Too
-        OTPConfigurator.sharedInstance.configure(viewController: self)
+        OTPEntryConfigurator.sharedInstance.configure(viewController: self)
         
         setupUI()
     }
@@ -43,6 +41,7 @@ class OTPViewController : UIViewController , OTPViewControllerInterface {
         // Hide the navigation bar on the this view controller
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
     }
+    
     
     private func getCustomTextFieldInputAccessoryView(with items: [UIBarButtonItem]) -> UIToolbar {
         let toolbar: UIToolbar = UIToolbar()
@@ -64,15 +63,16 @@ class OTPViewController : UIViewController , OTPViewControllerInterface {
     }
     
     
-    @IBAction func mobileNumberButtonTapped(_ sender: UIButton) {
-        
-        performSegue(withIdentifier: "segueFromLoginOptionsToOTP", sender: nil)
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
     }
     
 }
 
 
-extension OTPViewController: FPNTextFieldDelegate {
+extension OTPEntryViewController: FPNTextFieldDelegate {
 
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
         textField.rightViewMode = .always
