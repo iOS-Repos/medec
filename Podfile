@@ -7,5 +7,6 @@ target 'Medec' do
 
   # Pods for Medec
   pod "FlagPhoneNumber"
-
+  pod 'SVPinView', '~> 1.0'
+  
 end

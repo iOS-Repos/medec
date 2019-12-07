@@ -2,17 +2,21 @@ PODS:
   - FlagPhoneNumber (0.7.8):
     - FlagPhoneNumber/libPhoneNumberiOS (= 0.7.8)
   - FlagPhoneNumber/libPhoneNumberiOS (0.7.8)
+  - SVPinView (1.0.7)
 
 DEPENDENCIES:
   - FlagPhoneNumber
+  - SVPinView (~> 1.0)
 
 SPEC REPOS:
   trunk:
     - FlagPhoneNumber
+    - SVPinView
 
 SPEC CHECKSUMS:
   FlagPhoneNumber: 366348d1d54f4828140c0c7f33ccb694c34ddcdd
+  SVPinView: 6c1da57e4a1273298802f460c60511ba10f7c831
 
-PODFILE CHECKSUM: d16833b1c3149f62b8986515771b12548f836625
+PODFILE CHECKSUM: 4abf1b002c37ce57192c956a8babddb66c189430
 
 COCOAPODS: 1.8.4

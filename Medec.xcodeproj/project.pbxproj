@@ -14,6 +14,7 @@
 		9359C161239BD90F00974DA8 /* OTPEntryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C160239BD90F00974DA8 /* OTPEntryInteractor.swift */; };
 		9359C164239BDDD600974DA8 /* WalkThroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C163239BDDD600974DA8 /* WalkThroughViewController.swift */; };
 		93711DC7239990500078263D /* OTPEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93711DC6239990500078263D /* OTPEntryViewController.swift */; };
+		93723B67239C3BF1005F310B /* OTPCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93723B66239C3BF1005F310B /* OTPCodeViewController.swift */; };
 		937ABA562399663B00B6809A /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA512399663900B6809A /* Gilroy-Regular.ttf */; };
 		937ABA572399663B00B6809A /* Gilroy-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA522399663900B6809A /* Gilroy-Light.ttf */; };
 		937ABA582399663B00B6809A /* Gilroy-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 937ABA532399663A00B6809A /* Gilroy-Medium.ttf */; };
@@ -66,6 +67,7 @@
 		9359C160239BD90F00974DA8 /* OTPEntryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryInteractor.swift; sourceTree = "<group>"; };
 		9359C163239BDDD600974DA8 /* WalkThroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkThroughViewController.swift; sourceTree = "<group>"; };
 		93711DC6239990500078263D /* OTPEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryViewController.swift; sourceTree = "<group>"; };
+		93723B66239C3BF1005F310B /* OTPCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPCodeViewController.swift; sourceTree = "<group>"; };
 		937ABA512399663900B6809A /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		937ABA522399663900B6809A /* Gilroy-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.ttf"; sourceTree = "<group>"; };
 		937ABA532399663A00B6809A /* Gilroy-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.ttf"; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 				9359C163239BDDD600974DA8 /* WalkThroughViewController.swift */,
 			);
 			path = WalkThrough;
+			sourceTree = "<group>";
+		};
+		93723B65239C3B7C005F310B /* OTPCode */ = {
+			isa = PBXGroup;
+			children = (
+				93723B66239C3BF1005F310B /* OTPCodeViewController.swift */,
+			);
+			path = OTPCode;
 			sourceTree = "<group>";
 		};
 		937ABA4F2399660100B6809A /* Poppins */ = {
@@ -307,9 +317,10 @@
 		93F882122368DD9500E042E9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9359C162239BDDBF00974DA8 /* WalkThrough */,
+				93723B65239C3B7C005F310B /* OTPCode */,
 				937ABA6323998BD500B6809A /* OTPEntry */,
 				93F88243236901AA00E042E9 /* OTP */,
+				9359C162239BDDBF00974DA8 /* WalkThrough */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -505,6 +516,7 @@
 				93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */,
 				93711DC7239990500078263D /* OTPEntryViewController.swift in Sources */,
 				937ABA62239987E100B6809A /* OTPPresenter.swift in Sources */,
+				93723B67239C3BF1005F310B /* OTPCodeViewController.swift in Sources */,
 				937ABA5C2399865600B6809A /* OTPConfigurator.swift in Sources */,
 				937ABA602399878000B6809A /* OTPRouter.swift in Sources */,
 				9359C15B239BCFAC00974DA8 /* OTPEntryConfigurator.swift in Sources */,
