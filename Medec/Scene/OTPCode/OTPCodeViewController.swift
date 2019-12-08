@@ -30,6 +30,15 @@ class OTPCodeViewController: UIViewController, OTPCodeViewControllerInterface {
         setupUI()
     }
     
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+
+        if let navController = self.navigationController {
+            navController.popViewController(animated: true)
+        }
+
+    }
+    
     func setupUI() {
         
         otpSubmitCode.isEnabled = false

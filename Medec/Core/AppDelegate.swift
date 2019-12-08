@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //iOS 13 Default Modal Disable
         UIViewController.swizzlePresent()
         
+        UIApplication.shared.statusBarStyle = .default //Set Style
+        UIApplication.shared.isStatusBarHidden = false //Set if hidden
+        
         return true
     }
 

@@ -15,11 +15,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-pK-FNb">
-                                <rect key="frame" x="132" y="388" width="150" height="120"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-pK-FNb">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="9WQ-Wd-XLo"/>
-                                    <constraint firstAttribute="width" constant="150" id="PFB-Na-RRq"/>
+                                    <constraint firstAttribute="height" constant="200" id="9WQ-Wd-XLo"/>
+                                    <constraint firstAttribute="width" constant="200" id="PFB-Na-RRq"/>
                                 </constraints>
                             </imageView>
                         </subviews>

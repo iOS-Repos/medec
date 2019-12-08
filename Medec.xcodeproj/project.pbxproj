@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		268BAD4BC513443D9A4EB1D6 /* Pods_Medec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4381A7392796B6E000491D83 /* Pods_Medec.framework */; };
+		935337FE239D1F60003463FF /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935337FD239D1F60003463FF /* SelectLocationViewController.swift */; };
+		93533800239D24ED003463FF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935337FF239D24ED003463FF /* UIView.swift */; };
 		9359C15B239BCFAC00974DA8 /* OTPEntryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */; };
 		9359C15D239BD89600974DA8 /* OTPEntryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15C239BD89600974DA8 /* OTPEntryRouter.swift */; };
 		9359C15F239BD8D300974DA8 /* OTPEntryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15E239BD8D300974DA8 /* OTPEntryPresenter.swift */; };
@@ -61,6 +63,8 @@
 /* Begin PBXFileReference section */
 		40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medec.debug.xcconfig"; path = "Target Support Files/Pods-Medec/Pods-Medec.debug.xcconfig"; sourceTree = "<group>"; };
 		4381A7392796B6E000491D83 /* Pods_Medec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		935337FD239D1F60003463FF /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
+		935337FF239D24ED003463FF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryConfigurator.swift; sourceTree = "<group>"; };
 		9359C15C239BD89600974DA8 /* OTPEntryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryRouter.swift; sourceTree = "<group>"; };
 		9359C15E239BD8D300974DA8 /* OTPEntryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryPresenter.swift; sourceTree = "<group>"; };
@@ -133,6 +137,14 @@
 				D54D21DC27F313C71C019385 /* Pods-Medec.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		935337FC239D1EFC003463FF /* SelectLocation */ = {
+			isa = PBXGroup;
+			children = (
+				935337FD239D1F60003463FF /* SelectLocationViewController.swift */,
+			);
+			path = SelectLocation;
 			sourceTree = "<group>";
 		};
 		9359C162239BDDBF00974DA8 /* WalkThrough */ = {
@@ -268,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				93F8823B2368E6E300E042E9 /* UIViewController.swift */,
+				935337FF239D24ED003463FF /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,6 +330,7 @@
 		93F882122368DD9500E042E9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				935337FC239D1EFC003463FF /* SelectLocation */,
 				93723B65239C3B7C005F310B /* OTPCode */,
 				937ABA6323998BD500B6809A /* OTPEntry */,
 				93F88243236901AA00E042E9 /* OTP */,
@@ -511,9 +525,11 @@
 				9359C15F239BD8D300974DA8 /* OTPEntryPresenter.swift in Sources */,
 				93F88245236901BD00E042E9 /* OTPViewController.swift in Sources */,
 				93F882082368DD1600E042E9 /* Storyboard.swift in Sources */,
+				935337FE239D1F60003463FF /* SelectLocationViewController.swift in Sources */,
 				9359C164239BDDD600974DA8 /* WalkThroughViewController.swift in Sources */,
 				93F881F22368DC6B00E042E9 /* AppDelegate.swift in Sources */,
 				93F881F42368DC6B00E042E9 /* SceneDelegate.swift in Sources */,
+				93533800239D24ED003463FF /* UIView.swift in Sources */,
 				93711DC7239990500078263D /* OTPEntryViewController.swift in Sources */,
 				937ABA62239987E100B6809A /* OTPPresenter.swift in Sources */,
 				93723B67239C3BF1005F310B /* OTPCodeViewController.swift in Sources */,
