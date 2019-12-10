@@ -8,7 +8,7 @@
 
 import UIKit
 import FlagPhoneNumber
-
+import Firebase
 protocol OTPEntryViewControllerInterface
 {
     
@@ -64,6 +64,29 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
     
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
+        PhoneAuthProvider.provider().verifyPhoneNumber("+251 92 393 0947", uiDelegate: nil) { (verificationID, error) in
+          if let error = error {
+            print("errrr " , error)
+            return
+          }
+          // Sign in using the verificationID and the code sent to the user
+          // ...
+            UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
+//            let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
+//            let credential = PhoneAuthProvider.provider().credential(
+//            withVerificationID: verificationID,
+//            verificationCode: verificationCode)
+//            
+//            Auth.auth().signIn(with: credential) { (authResult, error) in
+//              if let error = error {
+//                // ...
+//                return
+//              }
+//              // User is signed in
+//              // ...
+//            }
+
+        }
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
         }

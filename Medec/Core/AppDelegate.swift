@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //iOS 13 Default Modal Disable
         UIViewController.swizzlePresent()
+        
+        FirebaseApp.configure()
         
         return true
     }

@@ -9,4 +9,10 @@ target 'Medec' do
   pod "FlagPhoneNumber"
   pod 'SVPinView', '~> 1.0'
   
+  # add pods for desired Firebase products
+  # https://firebase.google.com/docs/ios/setup#available-pods
+  pod 'Firebase/Auth'
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Firestore'
+  
 end
