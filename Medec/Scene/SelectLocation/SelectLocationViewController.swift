@@ -82,8 +82,10 @@ extension SelectLocationViewController : UITableViewDelegate , UITableViewDataSo
             
             cell.locationFlag.isHidden = false
             currentCountryFlagIndex = indexPath
+            cell.locationName.font = UIFont(name:"Poppins-SemiBold", size: 15.0)
         }else {
             cell.locationFlag.isHidden = true
+            cell.locationName.font = UIFont(name:"Poppins-Regular", size: 14.0)
         }
         
         return cell
@@ -99,7 +101,9 @@ extension SelectLocationViewController : UITableViewDelegate , UITableViewDataSo
         if let index = currentCountryFlagIndex {
             let previousCell = tableView.cellForRow(at: index) as? SelectionLocationTableViewCell
             previousCell?.locationFlag.isHidden = true
+            previousCell?.locationName.font = UIFont(name:"Poppins-Regular", size: 14.0)
             let currentCell = tableView.cellForRow(at: indexPath) as! SelectionLocationTableViewCell
+            currentCell.locationName.font = UIFont(name:"Poppins-SemiBold", size: 15.0)
             currentCell.locationFlag.isHidden = false
             currentCountryFlagIndex = indexPath
             currentLocation.text = country
