@@ -38,7 +38,7 @@ class SelectLocationViewController: UIViewController, SelectLocationViewControll
         prefferdUserLocation = UserDefaults.standard.string(forKey: Constants.Account.prefferedLocation) ?? "Ethiopia"
         currentLocation.text = prefferdUserLocation
         
-
+        
     }
     
     func setupUI() {
@@ -95,8 +95,9 @@ extension SelectLocationViewController : UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let country = DataSources.countriesNameData[indexPath.row]["name"]
-    UserDefaults.standard.set(country, forKey: Constants.Account.prefferedLocation)
+        UserDefaults.standard.set(country, forKey: Constants.Account.prefferedLocation)
         UserDefaults.standard.synchronize() // To Reload UseDefaults
+        
         
         if let index = currentCountryFlagIndex {
             let previousCell = tableView.cellForRow(at: index) as? SelectionLocationTableViewCell

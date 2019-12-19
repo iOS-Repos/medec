@@ -16,6 +16,10 @@ protocol OTPCodeViewControllerInterface
     
     func setupUI() // Sets Animation , Border ... all UI related things
     func doLocalization()
+    
+    func flipOTPSubmitButtonToDisabled()
+    func flipOTPSubmitButtonToEnabled()
+
 }
 
 class OTPCodeViewController: UIViewController, OTPCodeViewControllerInterface {
@@ -41,8 +45,7 @@ class OTPCodeViewController: UIViewController, OTPCodeViewControllerInterface {
     
     func setupUI() {
         
-        otpSubmitCode.isEnabled = false
-        otpSubmitCode.alpha = 0.5
+        flipOTPSubmitButtonToDisabled()
         configurePinView(pinView: otpPinView)
         otpPinView.activeBorderLineThickness = 0.6
         hideKeyboardWhenTappedAround()
@@ -89,13 +92,26 @@ class OTPCodeViewController: UIViewController, OTPCodeViewControllerInterface {
         pinView.didFinishCallback = didFinishEnteringPin(pin:)
         pinView.didChangeCallback = { pin in
             
+            if pin.count < 5 {
+                self.flipOTPSubmitButtonToDisabled()
+            }else {
+                self.flipOTPSubmitButtonToEnabled()
+            }
         }
     }
     
     func didFinishEnteringPin(pin:String) {
+        flipOTPSubmitButtonToEnabled()
+    }
+    
+    func flipOTPSubmitButtonToDisabled(){
+        otpSubmitCode.isEnabled = false
+        otpSubmitCode.alpha = 0.5
+    }
+    
+    func flipOTPSubmitButtonToEnabled(){
         otpSubmitCode.isEnabled = true
         otpSubmitCode.alpha = 1.0
-        print("code - " , pin )
     }
 
 }

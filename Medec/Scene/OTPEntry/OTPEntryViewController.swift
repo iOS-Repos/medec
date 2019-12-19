@@ -16,12 +16,16 @@ protocol OTPEntryViewControllerInterface
     
     func setupUI() // Sets Animation , Border ... all UI related things
     func doLocalization()
+    func flipSubmitButtonToEnabled()
+    func flipSubmitButtonToDisabled()
 }
 
 class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterface {
     
     @IBOutlet weak var countryPickerContainerView: UIView!
     @IBOutlet weak var phoneNumberMainTextField: DesignableUITextField!
+    
+    @IBOutlet weak var submitButton: UIButton!
     
     var output: OTPEntryInteractorInterface!
     var router: OTPEntryRouter!
@@ -55,6 +59,13 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
     
     public func setupUI(){
         
+        phoneNumberMainTextField.rightImage = UIImage()
+        phoneNumberMainTextField.delegate = self
+        phoneNumberMainTextField.addTarget(self, action: #selector(textFieldDidChange(_:)),
+        for: UIControl.Event.editingChanged)
+        
+        flipSubmitButtonToDisabled()
+        
         hideKeyboardWhenTappedAround()
     }
     
@@ -62,6 +73,18 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
         
     }
     
+    @objc func textFieldDidChange(_ textField: DesignableUITextField) {
+        if let text = textField.text {
+            
+            if text.count >= 10 {
+                textField.rightImage = UIImage(named: "checkmarked-icon")!
+                flipSubmitButtonToEnabled()
+            }else {
+                textField.rightImage = UIImage()
+                flipSubmitButtonToDisabled()
+            }
+        }
+    }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
         PhoneAuthProvider.provider().verifyPhoneNumber("+251 92 393 0947", uiDelegate: nil) { (verificationID, error) in
@@ -72,26 +95,28 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
           // Sign in using the verificationID and the code sent to the user
           // ...
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
-//            let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
-//            let credential = PhoneAuthProvider.provider().credential(
-//            withVerificationID: verificationID,
-//            verificationCode: verificationCode)
-//            
-//            Auth.auth().signIn(with: credential) { (authResult, error) in
-//              if let error = error {
-//                // ...
-//                return
-//              }
-//              // User is signed in
-//              // ...
-//            }
-
         }
         if let navController = self.navigationController {
             navController.popViewController(animated: true)
         }
     }
     
+    
+    @IBAction func submitButtonTapped(_ sender: UIButton) {
+        
+    }
+    
+    func flipSubmitButtonToEnabled() {
+       
+        submitButton.isEnabled = true
+        submitButton.alpha = 1.0
+    }
+    
+    func flipSubmitButtonToDisabled() {
+        
+        submitButton.isEnabled = false
+        submitButton.alpha = 0.5
+    }
 }
 
 
@@ -113,5 +138,26 @@ extension OTPEntryViewController: FPNTextFieldDelegate {
 
     func fpnDidSelectCountry(name: String, dialCode: String, code: String) {
         print(name, dialCode, code)
+    }
+}
+
+
+extension OTPEntryViewController : UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        if let char = string.cString(using: String.Encoding.utf8) {
+            let isBackSpace = strcmp(char, "\\b")
+            if (isBackSpace == -92) {
+                
+                return true
+            }
+        }
+        
+        if textField.text?.count == 12 {
+            return false
+        }
+    
+        return true
     }
 }
