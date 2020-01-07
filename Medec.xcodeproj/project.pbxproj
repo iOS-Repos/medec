@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		268BAD4BC513443D9A4EB1D6 /* Pods_Medec.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4381A7392796B6E000491D83 /* Pods_Medec.framework */; };
+		930A95B423C4D8D8006CEE0D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 930A95B323C4D8D8006CEE0D /* GoogleService-Info.plist */; };
+		930A95B623C4EB7E006CEE0D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 930A95B523C4EB7E006CEE0D /* Home.storyboard */; };
+		930A95B923C4EBE2006CEE0D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A95B823C4EBE2006CEE0D /* HomeViewController.swift */; };
 		9322212923A03B9B00B72AE7 /* SelectionLocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9322212823A03B9B00B72AE7 /* SelectionLocationTableViewCell.swift */; };
-		9322212E23A05EC400B72AE7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9322212D23A05EC400B72AE7 /* GoogleService-Info.plist */; };
 		935337FE239D1F60003463FF /* SelectLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935337FD239D1F60003463FF /* SelectLocationViewController.swift */; };
 		93533800239D24ED003463FF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935337FF239D24ED003463FF /* UIView.swift */; };
 		9359C15B239BCFAC00974DA8 /* OTPEntryConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */; };
@@ -65,9 +67,11 @@
 /* Begin PBXFileReference section */
 		40CB1D2C7E913FDD6514A8B8 /* Pods-Medec.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Medec.debug.xcconfig"; path = "Target Support Files/Pods-Medec/Pods-Medec.debug.xcconfig"; sourceTree = "<group>"; };
 		4381A7392796B6E000491D83 /* Pods_Medec.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Medec.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		930A95B323C4D8D8006CEE0D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		930A95B523C4EB7E006CEE0D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		930A95B823C4EBE2006CEE0D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9322212823A03B9B00B72AE7 /* SelectionLocationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionLocationTableViewCell.swift; sourceTree = "<group>"; };
 		9322212C23A05D6500B72AE7 /* Medec.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Medec.entitlements; sourceTree = "<group>"; };
-		9322212D23A05EC400B72AE7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		935337FD239D1F60003463FF /* SelectLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLocationViewController.swift; sourceTree = "<group>"; };
 		935337FF239D24ED003463FF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		9359C15A239BCFAC00974DA8 /* OTPEntryConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntryConfigurator.swift; sourceTree = "<group>"; };
@@ -142,6 +146,14 @@
 				D54D21DC27F313C71C019385 /* Pods-Medec.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		930A95B723C4EBA6006CEE0D /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				930A95B823C4EBE2006CEE0D /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		9322212723A03B7500B72AE7 /* cell */ = {
@@ -257,8 +269,8 @@
 				93F882132368DD9E00E042E9 /* Storyboard */,
 				93F882142368DDAA00E042E9 /* Services */,
 				93F881F52368DC6B00E042E9 /* ViewController.swift */,
+				930A95B323C4D8D8006CEE0D /* GoogleService-Info.plist */,
 				93F881FF2368DC6C00E042E9 /* Info.plist */,
-				9322212D23A05EC400B72AE7 /* GoogleService-Info.plist */,
 			);
 			path = Medec;
 			sourceTree = "<group>";
@@ -346,6 +358,7 @@
 		93F882122368DD9500E042E9 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				930A95B723C4EBA6006CEE0D /* Home */,
 				935337FC239D1EFC003463FF /* SelectLocation */,
 				93723B65239C3B7C005F310B /* OTPCode */,
 				937ABA6323998BD500B6809A /* OTPEntry */,
@@ -360,6 +373,7 @@
 			children = (
 				93F881FC2368DC6C00E042E9 /* LaunchScreen.storyboard */,
 				93F881F72368DC6B00E042E9 /* Main.storyboard */,
+				930A95B523C4EB7E006CEE0D /* Home.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -403,6 +417,7 @@
 				93F881EB2368DC6A00E042E9 /* Frameworks */,
 				93F881EC2368DC6A00E042E9 /* Resources */,
 				912CC36909E3EA9559459C0C /* [CP] Embed Pods Frameworks */,
+				B99112955DE0FFFCD65F3F20 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -458,11 +473,12 @@
 				93F881FE2368DC6C00E042E9 /* LaunchScreen.storyboard in Resources */,
 				93F882312368E13900E042E9 /* Poppins-Italic.ttf in Resources */,
 				93F8822A2368E13900E042E9 /* Poppins-Bold.ttf in Resources */,
+				930A95B623C4EB7E006CEE0D /* Home.storyboard in Resources */,
 				937ABA572399663B00B6809A /* Gilroy-Light.ttf in Resources */,
 				937ABA5A2399663B00B6809A /* Gilroy-Heavy.ttf in Resources */,
 				93F882382368E13900E042E9 /* Poppins-ExtraLight.ttf in Resources */,
 				93F882322368E13900E042E9 /* Poppins-MediumItalic.ttf in Resources */,
-				9322212E23A05EC400B72AE7 /* GoogleService-Info.plist in Resources */,
+				930A95B423C4D8D8006CEE0D /* GoogleService-Info.plist in Resources */,
 				93F882302368E13900E042E9 /* Poppins-Medium.ttf in Resources */,
 				93F882272368E13900E042E9 /* Poppins-SemiBold.ttf in Resources */,
 				93F881FB2368DC6C00E042E9 /* Assets.xcassets in Resources */,
@@ -523,6 +539,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B99112955DE0FFFCD65F3F20 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Medec/Pods-Medec-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Medec/Pods-Medec-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Medec/Pods-Medec-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -541,6 +574,7 @@
 				9359C161239BD90F00974DA8 /* OTPEntryInteractor.swift in Sources */,
 				9359C15F239BD8D300974DA8 /* OTPEntryPresenter.swift in Sources */,
 				93F88245236901BD00E042E9 /* OTPViewController.swift in Sources */,
+				930A95B923C4EBE2006CEE0D /* HomeViewController.swift in Sources */,
 				93F882082368DD1600E042E9 /* Storyboard.swift in Sources */,
 				935337FE239D1F60003463FF /* SelectLocationViewController.swift in Sources */,
 				9359C164239BDDD600974DA8 /* WalkThroughViewController.swift in Sources */,

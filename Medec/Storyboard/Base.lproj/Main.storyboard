@@ -30,10 +30,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walthrough-1" translatesAutoresizingMaskIntoConstraints="NO" id="fXs-Ui-RQz">
-                                <rect key="frame" x="50" y="154.5" width="314" height="226"/>
+                                <rect key="frame" x="50" y="-71.5" width="314" height="452"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Doctors" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qia-eL-A7A">
-                                <rect key="frame" x="125.5" y="430.5" width="163" height="35"/>
+                                <rect key="frame" x="132" y="430.5" width="150.5" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="e9X-Nf-caC"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JC-yO-WTP">
-                                <rect key="frame" x="125.5" y="480.5" width="163" height="42"/>
+                                <rect key="frame" x="132" y="480.5" width="150.5" height="35"/>
                                 <string key="text">Get list of best doctor 
 nearby you</string>
                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
@@ -114,10 +114,10 @@ nearby you</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walthrough-2" translatesAutoresizingMaskIntoConstraints="NO" id="fID-Xl-RVc">
-                                <rect key="frame" x="50" y="140.5" width="314" height="240"/>
+                                <rect key="frame" x="50" y="-99.5" width="314" height="480"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Book Appointment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seF-hK-K3F">
-                                <rect key="frame" x="100.5" y="430.5" width="213.5" height="35"/>
+                                <rect key="frame" x="110.5" y="430.5" width="193.5" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="qye-PS-Nkv"/>
                                 </constraints>
@@ -126,7 +126,7 @@ nearby you</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8p-Sh-RWM">
-                                <rect key="frame" x="100.5" y="480.5" width="213.5" height="42"/>
+                                <rect key="frame" x="110.5" y="480.5" width="193.5" height="35"/>
                                 <string key="text">Book an appointment with a 
 right doctor</string>
                                 <fontDescription key="fontDescription" name="Poppins-Light" family="Poppins" pointSize="15"/>
@@ -288,7 +288,7 @@ test  </string>
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="387"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-options-background" translatesAutoresizingMaskIntoConstraints="NO" id="Y7H-ew-PCd" customClass="DesignableUIImage" customModule="Medec" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="-100" width="414" height="487.00000000000011"/>
+                                                <rect key="frame" x="0.0" y="-100" width="414" height="487"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="40"/>
@@ -308,10 +308,10 @@ test  </string>
                                         <rect key="frame" x="0.0" y="387" width="414" height="387"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wpg-Hi-BdL">
-                                                <rect key="frame" x="50" y="20" width="314" height="252"/>
+                                                <rect key="frame" x="50" y="20" width="314" height="255.5"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y5o-pl-tsY" customClass="DesignableUIButton" customModule="Medec" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="74"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="75"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                         <state key="normal" title="Mobile Number">
                                                             <color key="titleColor" red="0.24705882352941178" green="0.25098039215686274" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
@@ -332,7 +332,7 @@ test  </string>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gke-If-bFF" customClass="DesignableUIButton" customModule="Medec" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="89" width="314" height="74"/>
+                                                        <rect key="frame" x="0.0" y="90" width="314" height="75.5"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
                                                         <state key="normal" title="Facebook">
                                                             <color key="titleColor" red="0.18823529411764706" green="0.50980392156862742" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -349,24 +349,10 @@ test  </string>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip3-dy-pR7" customClass="DesignableUIButton" customModule="Medec" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="178" width="314" height="74"/>
-                                                        <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="15"/>
-                                                        <state key="normal" title="Google">
-                                                            <color key="titleColor" red="1" green="0.41960784313725491" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        </state>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                <real key="value" value="25"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                                <color key="value" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                <real key="value" value="1"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MUv-aZ-56s" userLabel="GoogleSignin" customClass="GIDSignInButton">
+                                                        <rect key="frame" x="0.0" y="180.5" width="314" height="75"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    </view>
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="KxC-9w-fdl">
@@ -385,7 +371,7 @@ test  </string>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By continuing, you agree to Terms &amp; Conditions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAe-4b-m8n">
-                                                <rect key="frame" x="50" y="292" width="327.5" height="20"/>
+                                                <rect key="frame" x="50" y="295.5" width="297.5" height="16.5"/>
                                                 <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                 <color key="textColor" red="0.53725490196078429" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -420,7 +406,9 @@ test  </string>
                     </view>
                     <navigationItem key="navigationItem" id="Y5o-Fl-woa"/>
                     <connections>
+                        <outlet property="googleSignin" destination="MUv-aZ-56s" id="sGb-bI-axx"/>
                         <segue destination="g4f-2H-T7g" kind="show" identifier="segueFromLoginOptionsToOTP" id="bu8-uB-lRC"/>
+                        <segue destination="PlV-5E-faC" kind="showDetail" identifier="segueToHomeFromSignin" id="Z22-TY-ftg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D5M-H3-vE4" sceneMemberID="firstResponder"/>
@@ -801,7 +789,7 @@ test  </string>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8WB-Bh-rFD">
-                                        <rect key="frame" x="70" y="70" width="155.5" height="40"/>
+                                        <rect key="frame" x="70" y="70" width="138" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="E5S-31-zuM"/>
                                         </constraints>
@@ -860,8 +848,8 @@ test  </string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ui-Qd-3bv" customClass="RoundedCornerView" customModule="Medec" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="383" width="414" height="479"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xEI-XS-ode">
-                                        <rect key="frame" x="40" y="40" width="334" height="439"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xEI-XS-ode">
+                                        <rect key="frame" x="27" y="20" width="334" height="439"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="selectLocatonTableViewCellIdentifier" rowHeight="74" id="luI-r9-VYu" customClass="SelectionLocationTableViewCell" customModule="Medec" customModuleProvider="target">
@@ -879,7 +867,7 @@ test  </string>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdc-DG-4Qa" userLabel="locationName">
-                                                            <rect key="frame" x="65" y="26.5" width="229" height="21"/>
+                                                            <rect key="frame" x="65" y="28.5" width="229" height="17.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -927,7 +915,7 @@ test  </string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use current location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vkf-ad-9jg" userLabel="currentLocation">
-                                <rect key="frame" x="95" y="338" width="171" height="25"/>
+                                <rect key="frame" x="95" y="338" width="153.5" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="vh1-Kl-w5Z"/>
                                 </constraints>
@@ -1009,6 +997,16 @@ test  </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1EJ-B3-RRL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-165.21739130434784" y="126.5625"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="eZo-c3-bml">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="HomeVCStoryboardID" storyboardName="Home" id="PlV-5E-faC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uSW-hj-Kgs"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLN-Nr-mQJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4247" y="-306"/>
         </scene>
     </scenes>
     <resources>

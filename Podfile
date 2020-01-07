@@ -14,5 +14,6 @@ target 'Medec' do
   pod 'Firebase/Auth'
   pod 'Firebase/Messaging'
   pod 'Firebase/Firestore'
+  pod 'GoogleSignIn'
   
 end

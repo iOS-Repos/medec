@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:639865331066:ios:8829f2cc0451c25bbf0ac3</string>
+	<string>1:639865331066:ios:88d0261895c859a2bf0ac3</string>
 	<key>DATABASE_URL</key>
 	<string>https://medec-13380.firebaseio.com</string>
 </dict>

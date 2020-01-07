@@ -49,11 +49,11 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
     
     private func getCustomTextFieldInputAccessoryView(with items: [UIBarButtonItem]) -> UIToolbar {
         let toolbar: UIToolbar = UIToolbar()
-
+        
         toolbar.barStyle = UIBarStyle.default
         toolbar.items = items
         toolbar.sizeToFit()
-
+        
         return toolbar
     }
     
@@ -62,7 +62,7 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
         phoneNumberMainTextField.rightImage = UIImage()
         phoneNumberMainTextField.delegate = self
         phoneNumberMainTextField.addTarget(self, action: #selector(textFieldDidChange(_:)),
-        for: UIControl.Event.editingChanged)
+                                           for: UIControl.Event.editingChanged)
         
         flipSubmitButtonToDisabled()
         
@@ -87,18 +87,20 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
     }
     
     @IBAction func backButtonTapped(_ sender: UIButton) {
-        PhoneAuthProvider.provider().verifyPhoneNumber("+251 92 393 0947", uiDelegate: nil) { (verificationID, error) in
-          if let error = error {
-            print("errrr " , error)
-            return
-          }
-          // Sign in using the verificationID and the code sent to the user
-          // ...
+        PhoneAuthProvider.provider().verifyPhoneNumber("+251923930947", uiDelegate: nil) { (verificationID, error) in
+            if let error = error {
+                print("errrr " , error)
+                return
+            }
+            // Sign in using the verificationID and the code sent to the user
+            // ...
+            print("--- verification id : ", verificationID)
+            print("--- verification error : " , error)
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
         }
-        if let navController = self.navigationController {
-            navController.popViewController(animated: true)
-        }
+        //        if let navController = self.navigationController {
+        //            navController.popViewController(animated: true)
+        //        }
     }
     
     
@@ -107,7 +109,7 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
     }
     
     func flipSubmitButtonToEnabled() {
-       
+        
         submitButton.isEnabled = true
         submitButton.alpha = 1.0
     }
@@ -121,11 +123,11 @@ class OTPEntryViewController : UIViewController , OTPEntryViewControllerInterfac
 
 
 extension OTPEntryViewController: FPNTextFieldDelegate {
-
+    
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
         textField.rightViewMode = .always
-//        textField.rightView = UIImageView(image: isValid ? #imageLiteral(resourceName: "success") : #imageLiteral(resourceName: "error"))
-
+        //        textField.rightView = UIImageView(image: isValid ? #imageLiteral(resourceName: "success") : #imageLiteral(resourceName: "error"))
+        
         print(
             isValid,
             textField.getFormattedPhoneNumber(format: .E164) ?? "E164: nil",

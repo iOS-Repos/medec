@@ -8,6 +8,8 @@
 
 import UIKit
 import FlagPhoneNumber
+import Firebase
+import GoogleSignIn
 
 protocol OTPViewControllerInterface
 {
@@ -18,7 +20,9 @@ protocol OTPViewControllerInterface
     func doLocalization()
 }
 
-class OTPViewController : UIViewController , OTPViewControllerInterface {
+class OTPViewController : UIViewController , OTPViewControllerInterface, GIDSignInDelegate {
+    
+    
     
     
     @IBOutlet weak var phoneNumberTextField: FPNTextField!
@@ -28,6 +32,8 @@ class OTPViewController : UIViewController , OTPViewControllerInterface {
     var output: OTPInteractorInterface!
     var router: OTPRouter!
     
+    @IBOutlet weak var googleSignin: GIDSignInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +41,14 @@ class OTPViewController : UIViewController , OTPViewControllerInterface {
         OTPConfigurator.sharedInstance.configure(viewController: self)
         
         setupUI()
+        
+        GIDSignIn.sharedInstance().presentingViewController = self
+        googleSignin.colorScheme = .dark
+        googleSignin.style = .standard
+        
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,11 +60,11 @@ class OTPViewController : UIViewController , OTPViewControllerInterface {
     
     private func getCustomTextFieldInputAccessoryView(with items: [UIBarButtonItem]) -> UIToolbar {
         let toolbar: UIToolbar = UIToolbar()
-
+        
         toolbar.barStyle = UIBarStyle.default
         toolbar.items = items
         toolbar.sizeToFit()
-
+        
         return toolbar
     }
     
@@ -69,15 +83,39 @@ class OTPViewController : UIViewController , OTPViewControllerInterface {
         performSegue(withIdentifier: "segueFromLoginOptionsToOTP", sender: nil)
     }
     
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        let activityView = UIActivityIndicatorView(style: .large )
+        activityView.center = CGPoint(x: self.view.bounds.size.width/2, y: (self.view.bounds.size.height/2) + 25)
+        activityView.startAnimating()
+
+        self.view.addSubview(activityView)
+        
+        if let _ = user {
+            if let authentication = user.authentication {
+                let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
+                
+                Auth.auth().signIn(with: credential, completion: { (user, error) -> Void in
+                    if error != nil {
+                        print("Problem at signing in with google with error : \(error)")
+                    } else if error == nil {
+                        self.view.willRemoveSubview(activityView)
+                        self.performSegue(withIdentifier: "segueToHomeFromSignin", sender: nil)
+                    }
+                })
+            }
+        }
+        
+        self.view.willRemoveSubview(activityView)
+    }
+    
 }
-
-
 extension OTPViewController: FPNTextFieldDelegate {
-
+    
     func fpnDidValidatePhoneNumber(textField: FPNTextField, isValid: Bool) {
         textField.rightViewMode = .always
-//        textField.rightView = UIImageView(image: isValid ? #imageLiteral(resourceName: "success") : #imageLiteral(resourceName: "error"))
-
+        //        textField.rightView = UIImageView(image: isValid ? #imageLiteral(resourceName: "success") : #imageLiteral(resourceName: "error"))
+        
         print(
             isValid,
             textField.getFormattedPhoneNumber(format: .E164) ?? "E164: nil",
